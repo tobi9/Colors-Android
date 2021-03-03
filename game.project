@@ -3,7 +3,7 @@ title = POMPAYUS
 dependencies = https://github.com/defold/extension-iap/archive/2.0.2.zip,https://github.com/Lerg/extension-admob/archive/legacy.zip,https://github.com/defold/extension-review/archive/3.0.1.zip,https://github.com/defold/extension-gpgs/archive/2.2.0.zip
 compress_archive = 1
 write_log = 1
-version = 2.2.1
+version = 2.2.2
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -63,8 +63,7 @@ package = com.artificiom.pompayus
 manifest = /builtins/manifests/android/AndroidManifest.xml
 immersive_mode = 1
 input_method = KeyEvent
-version_code = 2
-proguard = /builtins/manifests/android/dmengine.pro
+version_code = 3
 
 [script]
 shared_state = 1

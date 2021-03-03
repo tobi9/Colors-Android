@@ -4,22 +4,9 @@ WARNING:REVIEW: Registered review (null) Extension
 
 INFO:GpgsExt: Registered extension Gpgs (null)
 INFO:ENGINE: Initialised sound device 'default'
-ERROR:SCRIPT: /main/data_handler.script:95: attempt to index global 'gpgs' (a nil value)
-stack traceback:
-	/main/data_handler.script:95: in function </main/data_handler.script:94>
 INFO:ADMOB: init
 INFO:DLIB: SSDP: Started on address 192.168.1.1
 INFO:DLIB: SSDP: Started on address 192.168.43.132
-ERROR:SCRIPT: /menu/menu.gui_script:197: bad argument #2 to 'set_text' (string expected, got nil)
-stack traceback:
-	[C]: in function 'set_text'
-	/menu/menu.gui_script:197: in function </menu/menu.gui_script:188>
-ERROR:GAMESYS: Error when dispatching message to gui scene: -2. Message 'chal' sent from main:/main#challenges to menu:/gui#menu.
-ERROR:SCRIPT: /menu/menu.gui_script:197: bad argument #2 to 'set_text' (string expected, got nil)
-stack traceback:
-	[C]: in function 'set_text'
-	/menu/menu.gui_script:197: in function </menu/menu.gui_script:188>
-ERROR:GAMESYS: Error when dispatching message to gui scene: -2. Message 'chal' sent from main:/main#challenges to menu:/gui#menu.
 INFO:SOUND: Waiting for OpenAL device to complete
 INFO:DLIB: SSDP: Done on address 192.168.1.1
 INFO:DLIB: SSDP: Done on address 192.168.43.132

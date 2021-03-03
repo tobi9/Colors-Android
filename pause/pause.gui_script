@@ -180,7 +180,7 @@ function on_message(self, message_id, message, sender)
 		msg.post("level:/controller#controller", "new_hints")
 		local txt = gui.get_node("ad_text")
 		gui.set_text(txt, "USED")
-		msg.post(ANALYZER, 'hint_used')
+		msg.post(analyzer, 'hint_used')
 		ad_for_hints_played = true
 	elseif message_id == msg_chal_reward then
 		local m = gui.get_node("money")

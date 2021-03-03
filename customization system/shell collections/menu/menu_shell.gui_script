@@ -35,14 +35,6 @@ function init(self)
     local c = gui.get_node("coins")
 	gui.set_text(c, "COINS\n"..tostring(coins))
 	
-	if mode == "light" then
-		local node = gui.get_node("dark")
-		gui.set_text(node, "DARK\nMODE")
-	else
-		local node = gui.get_node("dark")
-		gui.set_text(node, "LIGHT\nMODE")
-	end
-
 	if user_logged_in then
 		local node = gui.get_node("log_in")
 		gui.set_text(node, "LOG\nOUT")

@@ -18,7 +18,6 @@ local get_day = function(total_seconds)
 	return time_days
 end
 
-local is_first_time = false --  this variable indicates if the game is started for the first time since installation
 local is_login_declined = false -- this is boolean that indicates whether or not the player declined gpgs login
 
 local retrieve_data = function()
@@ -34,8 +33,6 @@ local retrieve_data = function()
 		daily_reward_streak = 0
 		last_day = get_day(os.time())
 		mode = "light"
-		--gpgs instructions
-		is_first_time = true
 	else
 		table = json.decode(table[1])
 		money = table[1]

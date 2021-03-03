@@ -7,7 +7,6 @@ local my_colors
 local color = nil -- the color in vector4 form
 local my_color -- the string of the color
 local my_word = nil-- the game object's word
-local qst
 local answer_type -- this variable is needed by the controller script in ascertaining the correct type of streak to record. it can only be two strings "word" or "color"
 local answer = nil -- this is the value the script sends so it can be compared with the button the was clicked
 
@@ -17,7 +16,6 @@ function init(self)
 		msg.post(level_gui, "show_prompt", {situation = "hints"})
 		ad_prompt_shown = true
 	end]]
-	--CHECK HERE FOR BUGS
 	my_words = color_strings
 	my_colors = colors
 	math.randomseed(os.time()*(os.time() + 1))
@@ -55,10 +53,11 @@ local current_speed -- records the speed of the object at the time the prompt wa
 --message ids
 local color_is = hash("your_color_is")
 local check_this = hash("check_this")
-local msg_hide = hash("hide")
-local msg_unhide = hash("unhide")
+--local msg_hide = hash("hide")
+--local msg_unhide = hash("unhide")
 
 function on_message(self, message_id, message, sender)
+	--question is a global variable declared in level.gui_script 
 	if message_id == color_is then
 		if question == "WHAT WORD?" then -- this sets the answer to any of the questions so it can be sent to the input
 			answer = my_word
@@ -82,13 +81,13 @@ function on_message(self, message_id, message, sender)
 			msg.post(main, "gameover")
 		end
 		answered = true -- this is a global variable declared in the controller script
-	--the following two messages are needed when the hint prompt is shown to the player
+	--[[the following two messages are needed when the hint prompt is shown to the player
 	elseif message_id == msg_hide then
 		label.set_text("#label", " ")
 		current_speed = speed
 		speed = 0
 	elseif message_id == msg_unhide then
 		label.set_text("#label", string.upper(my_word))
-		speed = current_speed
+		speed = current_speed]]
 	end
 end
